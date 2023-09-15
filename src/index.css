@@ -1,0 +1,110 @@
+html {
+  --background-neutral: #242424;
+  --text-color: rgba(255, 255, 255, 0.87);
+  --link-color: #646cff;
+  --link-color-hover: #535bf2;
+  /* theme */
+  --theme-blue: #1b65a6;
+  --theme-green: #498c60;
+  --theme-yellow: #f2c36b;
+  --theme-white: #f2e0c9;
+  --theme-red: #f24130;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--text-color);
+  background-color: var(--background-neutral);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: var(--link-color);
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--link-color-hover);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: var(--link-color);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Color Theme Swatches in RGBA */
+.NIVELES-DE-CONSCIENCIA-1-rgba {
+  color: rgba(26, 100, 165, 1);
+}
+.NIVELES-DE-CONSCIENCIA-2-rgba {
+  color: rgba(72, 140, 96, 1);
+}
+.NIVELES-DE-CONSCIENCIA-3-rgba {
+  color: rgba(242, 194, 106, 1);
+}
+.NIVELES-DE-CONSCIENCIA-4-rgba {
+  color: rgba(242, 223, 201, 1);
+}
+.NIVELES-DE-CONSCIENCIA-5-rgba {
+  color: rgba(242, 64, 48, 1);
+}
+
+/* Color Theme Swatches in HSLA */
+.NIVELES-DE-CONSCIENCIA-1-hsla {
+  color: hsla(208, 72, 37, 1);
+}
+.NIVELES-DE-CONSCIENCIA-2-hsla {
+  color: hsla(140, 31, 41, 1);
+}
+.NIVELES-DE-CONSCIENCIA-3-hsla {
+  color: hsla(39, 84, 68, 1);
+}
+.NIVELES-DE-CONSCIENCIA-4-hsla {
+  color: hsla(33, 61, 86, 1);
+}
+.NIVELES-DE-CONSCIENCIA-5-hsla {
+  color: hsla(5, 88, 56, 1);
+}

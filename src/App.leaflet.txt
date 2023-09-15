@@ -1,0 +1,54 @@
+import "leaflet/dist/leaflet.css";
+import { useEffect, useRef } from "react";
+import "./App.css";
+import L from "leaflet";
+import { MapContainer } from "react-leaflet/MapContainer";
+import { TileLayer } from "react-leaflet/TileLayer";
+import { Marker } from "react-leaflet/Marker";
+import { Popup } from "react-leaflet/Popup";
+
+function nullthrows<T>(value: T | null | undefined) {
+  if (value == null) {
+    throw new Error("nil");
+  }
+  return value;
+}
+
+export function App() {
+  const mapRef = useRef<HTMLDivElement | null>(null);
+
+  // useEffect(() => {
+  //   const mapDiv = nullthrows(mapRef.current);
+  //   var map = L.map(mapDiv).setView([51.505, -0.09], 13);
+
+  //   L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  //     maxZoom: 19,
+  //     attribution:
+  //       '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+  //   }).addTo(map);
+  // }, []);
+
+  return (
+    <>
+      {/* <div style={{ height: 180, width: 180 }} ref={mapRef}> */}
+      <MapContainer
+        center={[20.6611, -103.371]}
+        zoom={12}
+        scrollWheelZoom={false}
+        style={{ height: 500, width: 500 }}
+      >
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          // url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          url="https://c.tiles.wmflabs.org/osm-no-labels/{z}/{x}/{y}.png"
+        />
+        <Marker position={[51.505, -0.09]}>
+          <Popup>
+            A pretty CSS3 popup. <br /> Easily customizable.
+          </Popup>
+        </Marker>
+      </MapContainer>
+      {/* </div> */}
+    </>
+  );
+}
